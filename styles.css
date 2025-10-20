@@ -101,3 +101,45 @@ footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   .grid-4 > *{grid-column:span 3}
   .gallery figure{grid-column:span 4}
 }
+/* Home hero full photo (contained) */
+.hero-photo{
+  margin-top:20px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#0f0f0f;
+}
+.hero-photo img {
+  width:100%;
+  height:auto;
+  max-height:600px;   /* limits how tall the image can get */
+  object-fit:contain; /* keeps full photo visible */
+}
+/* ========== About Page Styles ========== */
+.about-photo{
+  margin:24px 0;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#0f0f0f;
+}
+.about-photo img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  max-height:700px; /* adjust if too tall */
+}
+
+.resume-btn{
+  margin:20px 0 40px;
+  text-align:center;
+}
+.resume-btn .btn{
+  padding:12px 28px;
+  font-weight:600;
+  letter-spacing:.05em;
+}
+
+
+
