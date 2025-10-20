@@ -126,13 +126,13 @@ footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   object-fit:contain; /* keeps full photo visible */
 }
 /* ========== About Page Styles ========== */
-.about-photo{
+/* .about-photo{
   margin:24px 0;
   border:1px solid var(--line);
   border-radius:16px;
   overflow:hidden;
   background:#0f0f0f;
-}
+} */
 .about-photo img{
   width:100%;
   height:auto;
