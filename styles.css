@@ -266,3 +266,21 @@ body.modal-open{ overflow:hidden; }
 body.modal-open {
   overflow: hidden;
 }
+
+/* ===== Footer "Top" button ===== */
+.top-link {
+  color: var(--fg);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-left: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Hover color = yellow */
+.top-link:hover {
+  color: var(--purple-color);               /* yellow text */
+  border-color: var(--purple-color);        /* yellow border */
+  text-decoration: none;
+}
