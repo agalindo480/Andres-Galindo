@@ -44,62 +44,87 @@
     <section class="section">
       <div class="container">
         <div class="grid grid-3">
-          <!-- Case Study Card -->
-          <article class="card">
-            <div class="thumb"><img src="images/case-lucero.jpg" alt="Lucero site mockup"></div>
-            <div class="body">
-              <h3>Lucero — Restaurant Website</h3>
-              <p>Goal: elevate brand presence and conversions. Role: design, dev, photo. Result: faster load, clearer UX.</p>
-            </div>
-            <div class="meta">
-              <!-- this is the old version without the script -->
-              <!-- <a class="btn" href="#" aria-label="Open Lucero case study (coming soon)">Read Study</a> -->
-    <!-- to update all case studies add this, they all share the same scripts 
-              
-    this is the skeleton
-    
-     <a class="btn open-modal" href="#"
-            data-title="Lucero — Restaurant Website"
-            data-img="images/case-lucero.jpg"
-            data-desc="Responsive restaurant site with original photography and clean UX. This study covers goals, approach, and outcomes.">
-            Read Study
-          </a>
-    
-    
-    
-    -->
 
-            <a class="btn open-modal" href="#"
-            data-title="Lucero at Omni Hotels — Senior Project Case Study"
-            data-img="images/case-lucero.jpg"
-            data-desc="This project gave me the opportunity to bring a real business to life through visuals and web design. I worked directly with Lucero at Omni Hotels, scouting the location, capturing custom photography and video, and building a fully responsive website from scratch.
+<!-- Card -->
+<article class="card">
+  <div class="thumb">
+    <img src="images/photography/gimlet.jpg" alt="Lucero site mockup">
+  </div>
+  <div class="body">
+    <h3>Lucero at Omni Hotels - Senior Project Case Study</h3>
+    <p>For my senior project, I partnered with Lucero at Omni Hotels, where I handled everything from brand photography to web development. I built the full website, captured original visuals, coordinated shoots, and applied an Agile workflow to keep the process collaborative and efficient.</p>
+  </div>
+  <div class="meta">
+  <a class="btn open-modal" href="#" data-target="#cs-lucero">Read Study</a>
+  <a class="btn" href="https://yourwebsite.com/lucero" target="_blank">Case Study</a>
+</div>
 
-From the start, my goal was to create a digital experience that matched the atmosphere and brand of Lucero — elegant, modern, and rooted in local flavor. Every photo, layout choice, and animation was designed to feel authentic to the space and the people who make it special.
 
-I took an Agile approach to manage this project: setting clear goals each week, gathering feedback after every shoot and design milestone, and adjusting based on client input. This helped me stay flexible, meet expectations, and deliver a polished final product that felt aligned with Lucero’s brand.
+  <!-- 🔒 Hidden modal content for this card -->
+  <div id="cs-lucero" class="cs-data" hidden>
+    <h2>Lucero at Omni Hotels — Senior Project Case Study</h2>
+    <img src="images/photography/gimlet.jpg" alt="Lucero website mockup">
+    <div class="desc">
+      <p>
+        This project gave me the opportunity to bring a real business to life through visuals and web design. I worked directly with Lucero at Omni Hotels, scouting the location, capturing custom photography and video, and building a fully responsive website from scratch.
+      </p>
+      <p>From the start, my goal was to create a digital experience that matched the atmosphere and brand of Lucero — elegant, modern, and rooted in local flavor. Every photo, layout choice, and animation was designed to feel authentic to the space and the people who make it special.</p>
+      <p>I took an Agile approach to manage this project: setting clear goals each week, gathering feedback after every shoot and design milestone, and adjusting based on client input. This helped me stay flexible, meet expectations, and deliver a polished final product that felt aligned with Lucero’s brand.</p>
+      <p>💡 My Role & Responsibilities
 
-💡 My Role & Responsibilities
+      Project planning and client coordination
+      Photography & videography direction
+      Website design and development (HTML, CSS, responsive design)
+      Content editing and optimization
+      Agile workflow and iterative collaboration</p>
+      <p>🧠 Skills Used
 
-Project planning and client coordination
-Photography & videography direction
-Website design and development (HTML, CSS, responsive design)
-Content editing and optimization
-Agile workflow and iterative collaboration
-🧠 Skills Used
+      HTML5 / CSS3 (responsive design, layout)
+      Photography & Videography
+      Project Management (Agile methodology)
+      Visual Storytelling & Branding
+      Communication & Client Coordination</p>
+    </div>
+  </div>
+</article>
 
-HTML5 / CSS3 (responsive design, layout)
-Photography & Videography
-Project Management (Agile methodology)
-Visual Storytelling & Branding
-Communication & Client Coordination">
-            Read Study
-          </a>
+<!-- Card -->
+<!-- <article class="card">
+  <div class="thumb">
+    <img src="images/case-lucero.jpg" alt="Lucero site mockup">
+  </div>
+  <div class="body">
+    <h3>Lucero — Restaurant Website</h3>
+    <p>Goal: elevate brand presence and conversions. Role: design, dev, photo.</p>
+  </div>
+  <div class="meta">
+    <a class="btn open-modal" href="#" data-target="#cs-lucero">Read Study</a>
+    <span>Case study</span>
+  </div> 
+  
+  or 
+  <div class="meta">
+  <a class="btn open-modal" href="#" data-target="#cs-lucero">Read Study</a>
+  <a class="btn" href="https://yourwebsite.com/lucero" target="_blank">Case Study</a>
 
-              <span>Coming soon</span>
-            </div>
-          </article>
+</div>
 
-          <!-- Add more cards -->
+  -->
+
+  <!-- 🔒 Hidden modal content for this card -->
+  <!-- <div id="cs-lucero" class="cs-data" hidden>
+    <h2>Lucero — Restaurant Website</h2>
+    <img src="images/case-lucero.jpg" alt="Lucero website mockup">
+    <div class="desc">
+      <p>The Lucero project focused on a responsive, black-and-white design system with original photography and a clean UX.</p>
+      <p>I led design, development, and content, improving load speed and conversion clarity.</p>
+    </div>
+  </div>
+</article> -->
+
+
+
+          <!-- Add more cards. replace with up above-->
           <article class="card">
             <div class="thumb"><img src="images/case-path.jpg" alt="Path to Success microsite preview"></div>
             <div class="body">
@@ -149,7 +174,7 @@ Communication & Client Coordination">
 </div>
 
 <!-- this is a shared script for all  -->
-<script>
+<!-- <script>
   (function(){
     const modal = document.getElementById('caseModal');
     const titleEl = document.getElementById('modalTitle');
@@ -187,6 +212,77 @@ Communication & Client Coordination">
     // Close when clicking outside the panel
     modal.addEventListener('click', e=>{
       if (e.target.classList.contains('modal')) closeModal();
+    });
+  })();
+</script> -->
+
+
+<!-- Shared Case Study Modal -->
+<div class="modal" id="caseModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <h2 id="modalTitle"></h2>
+    <div class="modal-media"><img id="modalImg" src="" alt=""></div>
+    <div id="modalDesc"></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    const modal = document.getElementById('caseModal');
+    const titleEl = document.getElementById('modalTitle');
+    const imgEl   = document.getElementById('modalImg');
+    const descEl  = document.getElementById('modalDesc');
+    const openBtns = document.querySelectorAll('.open-modal');
+    const closeEls = modal.querySelectorAll('[data-close]');
+    let lastFocused = null;
+
+    function openModalFrom(sourceId){
+      const source = document.querySelector(sourceId);
+      if(!source) return;
+
+      // pull pieces from hidden block
+      const h2 = source.querySelector('h2');
+      const img = source.querySelector('img');
+      const desc = source.querySelector('.desc');
+
+      titleEl.textContent = h2 ? h2.textContent : '';
+      if (img) {
+        imgEl.src = img.getAttribute('src') || '';
+        imgEl.alt = img.getAttribute('alt') || 'Case study image';
+      } else {
+        imgEl.removeAttribute('src');
+        imgEl.alt = '';
+      }
+      descEl.innerHTML = desc ? desc.innerHTML : '';
+
+      modal.setAttribute('aria-hidden','false');
+      document.body.classList.add('modal-open');
+      modal.querySelector('.modal-close').focus();
+    }
+
+    function closeModal(){
+      modal.setAttribute('aria-hidden','true');
+      document.body.classList.remove('modal-open');
+      if (lastFocused) lastFocused.focus();
+    }
+
+    openBtns.forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        e.preventDefault();
+        lastFocused = btn;
+        const target = btn.getAttribute('data-target');
+        openModalFrom(target);
+      });
+    });
+
+    closeEls.forEach(el=> el.addEventListener('click', closeModal));
+    modal.addEventListener('click', (e)=>{
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', e=>{
+      if (e.key === 'Escape') closeModal();
     });
   })();
 </script>
