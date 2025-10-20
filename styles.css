@@ -150,6 +150,8 @@ footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   font-weight:600;
   letter-spacing:.05em;
 }
+.resume-btn .btn:hover{background:#5708ea}
+
 .hero p {
   font-size: 1.15rem;      /* default is usually around 1rem (16px); this bumps it up */
   line-height: 1.8;        /* adds breathing room between lines */
@@ -175,3 +177,33 @@ footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   font-size: 1.2rem;
   line-height: 1.8;
 }
+
+/* ===== Case Study Modal ===== */
+.modal{
+  position:fixed; inset:0; z-index:1000;
+  display:none; align-items:center; justify-content:center;
+  background:rgba(0,0,0,.6);
+}
+.modal[aria-hidden="false"]{ display:flex; }
+
+.modal-panel{
+  background:#0d0d0d; color:var(--fg);
+  border:1px solid var(--line); border-radius:18px;
+  width:min(850px,95%); max-height:90vh; overflow:auto;
+  padding:28px; position:relative;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.modal-panel h2{ margin:0 48px 14px 0; font-size:24px; }
+.modal-media{ margin:14px 0; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.modal-media img{ width:100%; height:auto; display:block; }
+.modal p{ color:var(--muted); line-height:1.8; }
+
+.modal-close{
+  position:absolute; top:12px; right:12px;
+  width:40px; height:40px; border-radius:10px;
+  border:1px solid var(--line); background:#0f0f0f; color:var(--fg);
+  font-size:24px; line-height:1; cursor:pointer;
+}
+.modal-close:hover{ background:#151515; }
+
+body.modal-open{ overflow:hidden; }

@@ -52,7 +52,49 @@
               <p>Goal: elevate brand presence and conversions. Role: design, dev, photo. Result: faster load, clearer UX.</p>
             </div>
             <div class="meta">
-              <a class="btn" href="#" aria-label="Open Lucero case study (coming soon)">Read Study</a>
+              <!-- this is the old version without the script -->
+              <!-- <a class="btn" href="#" aria-label="Open Lucero case study (coming soon)">Read Study</a> -->
+    <!-- to update all case studies add this, they all share the same scripts 
+              
+    this is the skeleton
+    
+     <a class="btn open-modal" href="#"
+            data-title="Lucero — Restaurant Website"
+            data-img="images/case-lucero.jpg"
+            data-desc="Responsive restaurant site with original photography and clean UX. This study covers goals, approach, and outcomes.">
+            Read Study
+          </a>
+    
+    
+    
+    -->
+
+            <a class="btn open-modal" href="#"
+            data-title="Lucero at Omni Hotels — Senior Project Case Study"
+            data-img="images/case-lucero.jpg"
+            data-desc="This project gave me the opportunity to bring a real business to life through visuals and web design. I worked directly with Lucero at Omni Hotels, scouting the location, capturing custom photography and video, and building a fully responsive website from scratch.
+
+From the start, my goal was to create a digital experience that matched the atmosphere and brand of Lucero — elegant, modern, and rooted in local flavor. Every photo, layout choice, and animation was designed to feel authentic to the space and the people who make it special.
+
+I took an Agile approach to manage this project: setting clear goals each week, gathering feedback after every shoot and design milestone, and adjusting based on client input. This helped me stay flexible, meet expectations, and deliver a polished final product that felt aligned with Lucero’s brand.
+
+💡 My Role & Responsibilities
+
+Project planning and client coordination
+Photography & videography direction
+Website design and development (HTML, CSS, responsive design)
+Content editing and optimization
+Agile workflow and iterative collaboration
+🧠 Skills Used
+
+HTML5 / CSS3 (responsive design, layout)
+Photography & Videography
+Project Management (Agile methodology)
+Visual Storytelling & Branding
+Communication & Client Coordination">
+            Read Study
+          </a>
+
               <span>Coming soon</span>
             </div>
           </article>
@@ -93,5 +135,62 @@
     </div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+
+<!-- Shared Case Study Modal -->
+<div class="modal" id="caseModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <h2 id="modalTitle"></h2>
+    <div class="modal-media"><img id="modalImg" src="" alt=""></div>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<!-- this is a shared script for all  -->
+<script>
+  (function(){
+    const modal = document.getElementById('caseModal');
+    const titleEl = document.getElementById('modalTitle');
+    const imgEl   = document.getElementById('modalImg');
+    const descEl  = document.getElementById('modalDesc');
+    const openBtns = document.querySelectorAll('.open-modal');
+    const closeEls = modal.querySelectorAll('[data-close]');
+    let lastFocused = null;
+
+    function openModal(btn){
+      lastFocused = btn;
+      titleEl.textContent = btn.dataset.title || '';
+      imgEl.src = btn.dataset.img || '';
+      imgEl.alt = (btn.dataset.title || 'Case study') + ' preview';
+      descEl.textContent = btn.dataset.desc || '';
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      // focus trap start point
+      modal.querySelector('.modal-close').focus();
+    }
+    function closeModal(){
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      if (lastFocused) lastFocused.focus();
+    }
+
+    openBtns.forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        e.preventDefault();          // keep the button, but don’t navigate away
+        openModal(btn);
+      });
+    });
+    closeEls.forEach(el=> el.addEventListener('click', closeModal));
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+    // Close when clicking outside the panel
+    modal.addEventListener('click', e=>{
+      if (e.target.classList.contains('modal')) closeModal();
+    });
+  })();
+</script>
+
+
 </body>
 </html>
